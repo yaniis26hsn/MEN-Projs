@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>All content Page :</h1>
+    <br> <hr> <br>
+     <%for( let article of Articles){ %>
+     <h3> <%=article.title%> in the year <%=article.year%>  </h3>
+     <p>   <%=article.body%> </p>
+     <br>
+     <% } %>
+</body>
+</html>
