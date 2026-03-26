@@ -116,7 +116,7 @@ app.get("/getNewerThan/:year", async (req , res)=>{
   let theYear = req.params.year ;
    const articles = await Article.find({year: {$gt: Number(theYear)}}) ;
 
-  res.render("news.ejs" , {Articles : articles})
+  res.render("MaWebSite.ejs" , {Articles : articles})
  
 }) ;
 
@@ -135,7 +135,7 @@ app.get("/getByYears", async (req , res)=>{
   let theYears = req.body.years ;
    const articles = await Article.find({year: {$in: theYears }}) ;
 
-  res.render("news.ejs" , {Articles : articles})
+  res.render("MaWebSite.ejs" , {Articles : articles})
   
 }) ;
 app.use((err, req, res, next) => {
